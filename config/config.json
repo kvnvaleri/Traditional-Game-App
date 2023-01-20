@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "password",
+    "database": "dev_binarchallange6",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "password",
+    "database": "stag_binarchallange6",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "password",
+    "database": "prod_binarchallange6",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

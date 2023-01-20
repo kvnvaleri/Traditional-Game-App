@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "4c871477-dc7c-4581-a7d3-311243c5cf93",
+		"name": "Traditional Game - REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"player1\",\n    \"password\":\"player\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Who Am I",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY2OTYzNjM1OH0.iM_u8JZJksuw3GxUZM7lqjF5qsCWFI2PFM0ih3xB458",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/auth/api/v1/whoami",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"api",
+						"v1",
+						"whoami"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"player1\",\n    \"password\":\"localhost\",\n    \"name\": \"Player 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/api/v1/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Room",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJwbGF5ZXIyIiwiaWF0IjoxNjY5NjQxNTQ4fQ.5WxgYElisPSGGe9aJXM6Z-PZ4ZYZjGBPkRYpg2Gy-8A",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/room/api/v1/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"room",
+						"api",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fight Player 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJwbGF5ZXIgMSIsImlhdCI6MTY2OTYzOTUyOX0.NzlheKVdqQ43mtm4xxEENG1sKfoVIyEFRR_iSePvnYk",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"choice\":\"S\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/fight/api/v1/1669725725196",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fight",
+						"api",
+						"v1",
+						"1669725725196"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fight Player 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJwbGF5ZXIyIiwiaWF0IjoxNjY5NzIyNDQzfQ.qX_tsxc4qJKsBYYL5chLd2n16KZt_LYX1-asl_v7Ooc",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"choice\":\"P\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/fight/api/v1/1669725936844",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fight",
+						"api",
+						"v1",
+						"1669725936844"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

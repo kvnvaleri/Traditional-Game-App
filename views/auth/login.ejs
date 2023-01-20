@@ -1,0 +1,26 @@
+<html>
+    <%- include("../partials/head") %>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <% if (messages.error) { %>
+                    <h5><%= messages.error %></h5>
+                <% } %>
+                <form method="post" action="/auth/login">
+                    <div class="form-outline mb-4">
+                        <input type="text" name="username" class="form-control">
+                        <label class="form-label">Username</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="password" name="password" class="form-control">
+                        <label class="form-label">Password</label>
+                    </div>
+
+                    <input type="submit" class="btn btn-primary btn-block" value="Log In">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

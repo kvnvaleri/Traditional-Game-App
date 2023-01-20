@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Dahsboard User Game</title>
+        <link rel="stylesheet" href="CSS/boostrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-right"><a href="./create.ejs" class="btn btn-primary">Create User Game</a></div>
+                <div class="col-md12"></div>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>Hobby</th>
+                        <th>Birthday</th>
+                        <th>Birthplace</th>
+                        <th>Nationality</th>
+                        <th>Action</th>
+                    </tr>
+                    <% user_biodata.forEach(i => { %>
+                        <tr>
+                            <td><%= user_biodata.id %></td>
+                            <td><%= user_biodata.name %></td>
+                            <td><%= user_biodata.age %></td>
+                            <td><%= user_biodata.gender %></td>
+                            <td><%= user_biodata.address %></td>
+                            <td><%= user_biodata.hobby %></td>
+                            <td><%= user_biodata.birthday %></td>
+                            <td><%= user_biodata.birthplace %></td>
+                            <td><%= user_biodata.nationality %></td>
+                            <td><%= user_biodata.age %></td>
+                            <td>
+                                <a href="dashboard/update/<%= user_biodata.id %>" class="btn btn-primary">Update</a>
+                                <a href="dashboard/delete/<%= user_biodata.id %>" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+* {
+  background-color: #AE876B;
+  max-width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+header a {
+  margin: 5px;
+  padding: 10px;
+  font-size: 60px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #864313;
+}
+
+header img {
+  margin: 10px;
+  transform: scale(0.8);
+}
+
+header h1 {
+  padding: 10px;
+  color: orange;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 12em 20em 5em;
+  grid-template-areas: 
+        ". player1 .       computer  ."
+        ". player1 versus  computer  ."
+        ". player1 refresh computer  .";
+}
+
+main img {
+  padding: 15px;
+}
+
+#player1 {
+  grid-area: player1;
+  text-align: center;
+}
+
+#player1 div {
+  display:inline-block;
+  width: 12rem;
+  border-radius: 20px;
+}
+
+#player1 input {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  width: 80%;
+  transform: scale(0.8);
+}
+
+#versus {
+  grid-area: versus;
+  text-align: center;
+}
+
+.versus {
+  color: darkred;
+  font-size: 80px;
+  font-weight: 1000;
+  margin-top: 20%;
+}
+
+.win-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 9rem;
+  background-color: darkgreen;
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+  margin: 10% auto;
+  border-radius: 8px;
+  transform: rotate(-25deg);
+}
+
+#computer {
+  grid-area: computer;
+  text-align: center;
+}
+
+#computer div {
+  display:inline-block;
+  width: 12rem;
+  border-radius: 20px;
+}
+
+#computer img {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  width: 80%;
+  transform: scale(0.8);
+}
+
+#refresh-button {
+  background: url();
+  grid-area: refresh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.player1Sign input {
+  background-color: inherit;
+}
+
+.computersign img {
+  background-color: inherit;
+}
